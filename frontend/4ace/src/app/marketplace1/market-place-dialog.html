@@ -1,0 +1,88 @@
+<div>
+  <form [formGroup]="form" class="formClass">
+    <mat-form-field
+      appearance="outline"
+      class="formFieldClassText"
+      style="width: 100%"
+    >
+      <mat-label>Item</mat-label>
+      <!-- <input matInput formControlName="allergies"> -->
+      <textarea matInput formControlName="item"></textarea>
+      <mat-icon matSuffix>add_shopping_cart</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      class="formFieldClassText"
+      style="width: 100%"
+    >
+      <mat-label>Owner</mat-label>
+      <!-- <input matInput formControlName="diseases"> -->
+      <textarea matInput formControlName="owner"></textarea>
+      <mat-icon matSuffix>account_circle</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      class="formFieldClassText"
+      style="width: 100%"
+    >
+      <mat-label>Price</mat-label>
+      <!-- <input matInput formControlName="injuryhistory"> -->
+      <textarea matInput formControlName="price"></textarea>
+      <mat-icon matSuffix>attach_money</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field
+      appearance="outline"
+      class="formFieldClassText"
+      style="width: 100%"
+    >
+      <mat-label>Contact</mat-label>
+      <!-- <input matInput formControlName="injuryhistory"> -->
+      <textarea matInput formControlName="contact"></textarea>
+      <mat-icon matSuffix>perm_phone_msg</mat-icon>
+    </mat-form-field>
+<!-- 
+    <mat-form-field
+      appearance="outline"
+      class="formFieldClassText"
+      style="width: 100%"
+    >
+      <mat-label>Reports</mat-label>
+      <input type="file"matInput formControlName="file">
+      <textarea matInput formControlName="file"></textarea>
+      <mat-icon matSuffix>attach_file</mat-icon>
+    </mat-form-field> -->
+    <!-- <div (click)="uploadFile.click()">
+        <button mat-raised-button color="primary">Choose File</button>
+        <input #uploadFile (change)="upload($event)" type='file' style="display:none"/> 
+     </div>
+    <div style="display: flex; flex-direction: column">
+      <div style="margin-left: 38%">
+        <button mat-raised-button class="button" (click)="submit()">
+          Submit
+        </button>
+        &nbsp;&nbsp;
+        <button mat-raised-button class="button" (click)="close()">
+          Close
+        </button>
+      </div>
+    </div> -->
+    <mat-form-field class="columns">
+        <mat-label *ngIf="selectedFiles; else newFile">{{selectedFiles.item(0).name}}</mat-label>
+        <ng-template #newFile>
+            <mat-label>Choose file</mat-label>
+        </ng-template>
+        <input matInput disabled>
+        <button mat-icon-button matSuffix (click)="fileInput.click()">
+            <mat-icon>attach_file</mat-icon>
+        </button>
+        <input hidden (change)="selectFile($event)" #fileInput type="file" id="file">
+    </mat-form-field>
+    <div style="display: flex;flex-direction: column;">
+        <div style="margin-left: 38%;">
+            <button mat-raised-button class="button" (click)="submit()">Submit</button> &nbsp;&nbsp;
+            <button mat-raised-button class="button" (click)="close()">Close</button>
+        </div>
+    </div>
+  </form>
+</div>

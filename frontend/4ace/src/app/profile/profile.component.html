@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<br style="display: flex; border-top: 2px solid black" />
+<div>
+  <img
+    src="https://res.cloudinary.com/dbszbhg8n/image/upload/v1671631746/cld-sample.jpg"
+    alt="profile"
+    style="height: 200px; width: 200px; margin: 50px"
+  />
+</div>
+ <div style="margin:30px; margin-left: 50px;">
+    <ul *ngIf="loaded">
+        <li>
+          <span>{{ profile.fullName }}</span>
+        </li>
+        <li>
+          <span>{{ profile.phoneNo }}</span>
+        </li>
+        <li>
+          <span>{{ profile.gender }}</span>
+        </li>
+        <li><span>{{ profile.role }}</span></li>
+      </ul>
+</div>
+
+<!--
+<div style="display: flex;">
+<div class="info" style="margin: 10px; margin-left: 50px;">
+    Nagpur
+</div>
+<div style="position: relative; left: 240px;">
+<ul style=" display: flex; list-style: none;  position: relative;
+right: 40px;">
+    <li style="margin-right: 100px;">About</li>
+    
+</ul>
+
+
+<p></p>
+
+<ul style=" display: flex; list-style: none;  position: relative;
+right: 40px;">
+    <li style="margin-right: 100px;">Phone</li>
+    <li>9763876256</li>
+</ul>
+
+<ul style=" display: flex; list-style: none;  position: relative;
+right: 40px;">
+    <li style="margin-right: 100px;">Address</li>
+    <li>Chembur , Mumbai</li>
+</ul>
+
+<ul style=" display: flex; list-style: none;  position: relative;
+right: 40px;">
+    <li style="margin-right: 100px;">E-MAIL</li>
+    <li>KNOWYOURPERSON@GMAIL.COM</li>
+</ul>
+<ul style=" display: flex; list-style: none;  position: relative;
+right: 40px;">
+    <li style="margin-right: 100px;">DOB</li>
+    <li>15/05/03</li>
+</ul>
+
+<ul style=" display: flex; list-style: none;  position: relative;
+right: 40px;">
+    <li style="margin-right: 100px;">Gender</li>
+    <li>Male</li>
+</ul>
+</div>
+</div> -->
+
+

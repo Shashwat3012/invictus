@@ -1,0 +1,150 @@
+<div>
+  <body>
+    <div class="container">
+      <div class="title">Registration</div>
+      <div class="content">
+        <form action="#" [formGroup]="form">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                matInput
+                formControlName="fullname"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Username</span>
+              <input
+                type="text"
+                placeholder="Enter your username"
+                matInput
+                formControlName="username"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                type="text"
+                placeholder="Enter your email"
+                matInput
+                formControlName="email"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                type="text"
+                placeholder="Enter your number"
+                matInput
+                formControlName="contact"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Password</span>
+              <input
+                type="text"
+                placeholder="Enter your password"
+                matInput
+                formControlName="password"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <input type="text" placeholder="Confirm your password" required />
+            </div>
+          </div>
+          <div class="input-box">
+            <mat-label>Role: </mat-label> &nbsp;&nbsp;
+             <mat-radio-group aria-label="Select an option" formControlName="role">
+               <mat-radio-button value="Member">Member</mat-radio-button>
+               &nbsp;&nbsp;
+               <mat-radio-button value="Non-Member">Non-Member</mat-radio-button>
+               &nbsp;&nbsp;
+             </mat-radio-group>
+           </div>
+           <div class="input-box">
+            <mat-label>Gender: </mat-label> &nbsp;&nbsp;
+             <mat-radio-group aria-label="Select an option" formControlName="gender">
+               <mat-radio-button value="Male">Male</mat-radio-button>
+               &nbsp;&nbsp;
+               <mat-radio-button value="Female">Female</mat-radio-button>
+               &nbsp;&nbsp;
+               <mat-radio-button value="Prefer not to say">Prefer not to say</mat-radio-button>
+               &nbsp;&nbsp;
+             </mat-radio-group>
+           </div>
+          <!-- <div class="gender-details">
+            <input type="radio" name="role" id="dot-4" formControlName="role" />
+            <input type="radio" name="role" id="dot-5" formControlName="role" />
+            <span class="gender-title">Role</span>
+            <div class="category">
+              <label for="dot-4">
+                <span class="dot four"></span>
+                <span class="gender">Member</span>
+              </label>
+              <label for="dot-5">
+                <span class="dot five"></span>
+                <span class="gender">Non-Member</span>
+              </label>
+            </div>
+          </div>
+          <div class="gender-details">
+            <input
+              type="radio"
+              name="gender"
+              id="dot-1"
+              formControlName="gender"
+            />
+            <input
+              type="radio"
+              name="gender"
+              id="dot-2"
+              formControlName="gender"
+            />
+            <input
+              type="radio"
+              name="gender"
+              id="dot-3"
+              formControlName="gender"
+            />
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">Prefer not to say</span>
+              </label>
+            </div>
+            <div class="input-box">
+              <span class="details">Enter Birth Date</span>
+              <input type="date" placeholder="date" required />
+            </div>
+          </div> -->
+          <div class="button">
+            <input type="submit" (click)="register()" value="Register" />
+          </div>
+        </form>
+        <div class="button_back">
+          <a href="login">
+            <input type="submit" value="Back to Home" />
+          </a>
+          <!-- <a href="home.html">Back to Home</a> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</div>

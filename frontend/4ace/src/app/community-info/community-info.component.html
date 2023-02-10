@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<app-header></app-header>
+         <div>
+            <div class="mat-elevation-z8" style="width:80%;margin-left: 10%;margin-top: 2%;">
+                <!-- <caption><span>Products</span></caption> -->
+                 <table mat-table [dataSource]="dataSource" matSort>
+       
+                    <ng-container matColumnDef="fullName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Full Name</th>
+                        <td mat-cell *matCellDef="let row"> {{row.fullName}} </td>
+                    </ng-container>
+        
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+                    </ng-container>
+        
+                    <ng-container matColumnDef="phoneNo">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact </th>
+                        <td mat-cell *matCellDef="let row"> {{row.phoneNo}} </td>
+                    </ng-container> 
+
+                    <ng-container matColumnDef="gender">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gender </th>
+                        <td mat-cell *matCellDef="let row"> {{row.gender}} </td>
+                    </ng-container> 
+                    <ng-container matColumnDef="birthDate">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+                        <td mat-cell *matCellDef="let row"> {{row.birthDate}} </td>
+                    </ng-container> 
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="example-element-row">
+                    </tr> 
+        
+                </table>
+            </div>
+        </div> 
+        <br><br>
+       
+
+
+
+
+
+
+      

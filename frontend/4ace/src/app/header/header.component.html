@@ -1,0 +1,80 @@
+<div>
+  <mat-card class="header">
+    <mat-toolbar style="background-color: #ffb200">
+      <mat-icon
+        style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        matTooltip="Home"
+        matTooltipPosition="above"
+        (click)="profileMethod('home')"
+        >home</mat-icon
+      >
+      <!-- <mat-icon style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        >account_box</mat-icon
+      > -->
+
+      <mat-icon
+        mat-fab
+        style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        matTooltip="Discussion"
+        matTooltipPosition="above"
+        (click)="profileMethod('discussion')"
+        >forum</mat-icon
+      >
+      <mat-icon
+        style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        matTooltip="Courses"
+        matTooltipPosition="above"
+        (click)="profileMethod('courses')"
+        >library_books</mat-icon
+      >
+      <mat-icon
+        style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        matTooltip="Market Place"
+        matTooltipPosition="above"
+        (click)="profileMethod('market-place')"
+        [matMenuTriggerFor]="market"
+        >gavel</mat-icon
+      >
+      <mat-icon
+        style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        matTooltip="Community"
+        matTooltipPosition="above"
+        (click)="profileMethod('community')"
+        [matMenuTriggerFor]="community"
+        >supervisor_account</mat-icon
+      >
+      <span class="example-spacer"></span>
+      <mat-icon
+        style="cursor: pointer; font-size: 1.6rem; width: 4%"
+        [matMenuTriggerFor]="menu"
+        >account_circle</mat-icon
+      >
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="profileMethod('profile')">
+          <mat-icon>perm_identity</mat-icon>Profile
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>power_settings_new</mat-icon>Logout
+        </button>
+        
+      </mat-menu>
+      <mat-menu #market="matMenu">
+        <button mat-menu-item (click)="profileMethod('market')">
+          <mat-icon>add_shopping_cart</mat-icon>Market
+      </button>
+      <button mat-menu-item (click)="profileMethod('ideas')">
+          <mat-icon>important_devices</mat-icon>Ideas-Wall
+      </button>
+      </mat-menu>
+      <mat-menu #community="matMenu">
+        <button mat-menu-item (click)="profileMethod('info')">
+          <mat-icon>assignment_ind</mat-icon>Info
+      </button>
+      <button mat-menu-item (click)="profileMethod('survey')">
+          <mat-icon>assignment</mat-icon>Survey
+      </button>
+      </mat-menu>
+    </mat-toolbar>
+  </mat-card>
+</div>

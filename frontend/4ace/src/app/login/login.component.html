@@ -1,0 +1,44 @@
+<div class="wrapper" style="top: 17vh; left: 40vw; position: relative">
+  <div class="title-text">
+    <div class="title login">RURAL COMM</div>
+  </div>
+  <div class="form-container">
+    <div class="slide-controls">
+      <input type="radio" name="slide" id="login" checked />
+      <input type="radio" name="slide" id="signup" />
+      <label for="login" class="slide login">Login</label>
+      <!-- <label for="signup" class="slide signup">Signup</label> -->
+      <div class="slider-tab"></div>
+    </div>
+    <div class="form-inner">
+      <form [formGroup]="form" class="formClass">
+        <div class="field">
+          <mat-label>Username: </mat-label>
+          <input type="text" matInput formControlName="username" />
+        </div>
+        <div class="field">
+          <mat-label>Password: </mat-label>
+          <input type="password" matInput formControlName="password" />
+        </div>
+        &nbsp;
+        <div class="field">
+         <mat-label>Role: </mat-label> &nbsp;&nbsp;
+          <mat-radio-group aria-label="Select an option" formControlName="role">
+            <mat-radio-button value="Member">Member</mat-radio-button>
+            &nbsp;&nbsp;
+            <mat-radio-button value="Non-Member">Non-Member</mat-radio-button>
+            &nbsp;&nbsp;
+          </mat-radio-group>
+        </div>
+        <!-- <div class="pass-link">
+                <a href="#">Forgot password?</a>
+             </div> -->
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" (click)="submit()" value="Login" />
+        </div>
+        <div class="signup-link">Not a member? <a href="register">Signup now</a></div>
+      </form>
+    </div>
+  </div>
+</div>

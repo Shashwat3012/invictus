@@ -38,6 +38,6 @@ Conclusion:
 
 We understood the need of a community platform for rural areas. We learnt the technology behind web application development using Angular, use of Springboot framework for implementing REST APIs and connecting to PostgreSQL DB. Also, while implementing our solution, we came across different technical problems and found a way out of those. This will help us in the future when we try to solve more real-world problems as IT professionals.
 
-Video link
+Video link: https://drive.google.com/file/d/1-05MbRPXuF7Y6jkgD2DJozwg7dkSLPHE/view
 
 #Invictus2023
